@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+    postgres:
+        image: postgres:10
+        container_name: aiven-postgres
+        environment:
+          POSTGRES_PASSWORD: admin
+          POSTGRES_USER: admin
+          POSTGRES_DB: kafka-sink
+        ports:
+          - 5432:5432
